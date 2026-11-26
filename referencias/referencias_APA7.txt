@@ -1,0 +1,11 @@
+Referencias base sugeridas (APA 7)
+
+Kelley, D. (1995). Teoría de autómatas y lenguajes formales. Prentice Hall.
+
+Node.js. (2026). Readline. Node.js documentation. https://nodejs.org/api/readline.html
+
+Python Software Foundation. (s. f.). The Python tutorial. https://docs.python.org/3/tutorial/
+
+MDN Web Docs. (s. f.). JavaScript guide. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+
+Nota: Las referencias institucionales exactas de UIA1/UIA2/UIA3 deben conservarse tal como aparezcan en los materiales del curso al integrarlas en la versión final entregable.

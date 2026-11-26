@@ -1,0 +1,15 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {resolve,basename} from 'node:path';
+import {analyze,errorsText} from '../interfaz/core.js';
+const file=process.argv[2]||'pseudocodigo/programa_C.txt';
+const code=await readFile(resolve(file),'utf8');
+const result=analyze(code);
+await mkdir('reportes',{recursive:true});
+const base=basename(file,'.txt');
+await writeFile(`reportes/${base}_errores.txt`,errorsText(result));
+await writeFile(`reportes/${base}_AST.json`,JSON.stringify(result.ast,null,2));
+await writeFile(`reportes/${base}_tokens.json`,JSON.stringify(result.tokens,null,2));
+await writeFile(`reportes/${base}_simbolos.json`,JSON.stringify(result.symbols,null,2));
+console.log(`${base}: ${result.tokens.length} tokens, ${result.symbols.length} símbolos, ${result.errors.length} errores`);
+console.log(errorsText(result));
+if(!result.success)process.exitCode=1;

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "n",
+    "dataType": "Numero",
+    "kind": "variable",
+    "line": 3,
+    "scope": "global",
+    "explicit": false
+  },
+  {
+    "name": "numeros",
+    "dataType": "Numero",
+    "kind": "arreglo",
+    "line": 4,
+    "scope": "global",
+    "explicit": true
+  },
+  {
+    "name": "suma",
+    "dataType": "Entero",
+    "kind": "variable",
+    "line": 5,
+    "scope": "global",
+    "explicit": false
+  },
+  {
+    "name": "max",
+    "dataType": "Entero",
+    "kind": "variable",
+    "line": 6,
+    "scope": "global",
+    "explicit": false
+  },
+  {
+    "name": "i",
+    "dataType": "Entero",
+    "kind": "variable",
+    "line": 7,
+    "scope": "global",
+    "explicit": false
+  },
+  {
+    "name": "promedio",
+    "dataType": "Decimal",
+    "kind": "variable",
+    "line": 15,
+    "scope": "global",
+    "explicit": false
+  }
+]

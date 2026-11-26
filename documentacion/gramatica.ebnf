@@ -1,0 +1,64 @@
+(* Gramática formal del pseudocódigo — Fase 1 *)
+
+programa             = "Inicio", salto, lista_instrucciones, "Fin" ;
+lista_instrucciones  = { instruccion, salto } ;
+
+instruccion          = lectura | escritura | asignacion | declaracion
+                     | condicional | mientras | para | dimension
+                     | funcion | procedimiento | retorno | llamada
+                     | comentario ;
+
+lectura              = "Leer", referencia ;
+escritura            = "Escribir", expresion, { ",", expresion } ;
+asignacion           = referencia, "=", expresion ;
+declaracion          = tipo, identificador, [ "=", expresion ] ;
+tipo                 = "Entero" | "Decimal" | "Cadena" ;
+
+condicional          = "Si", expresion_logica, "Entonces", salto,
+                       lista_instrucciones,
+                       [ "Sino", salto, lista_instrucciones ],
+                       "FinSi" ;
+
+mientras             = "Mientras", expresion_logica, "Hacer", salto,
+                       lista_instrucciones, "FinMientras" ;
+
+para                 = "Para", identificador, "=", expresion,
+                       "Hasta", expresion, [ "Paso", expresion ],
+                       "Hacer", salto, lista_instrucciones, "FinPara" ;
+
+dimension            = "Dimension", identificador, "[", expresion, "]" ;
+
+funcion              = "Funcion", [ identificador, "=" ], identificador, "(", [ parametros ], ")", salto,
+                       lista_instrucciones, "FinFuncion" ;
+procedimiento        = "Procedimiento", identificador, "(", [ parametros ], ")", salto,
+                       lista_instrucciones, "FinProcedimiento" ;
+parametros           = identificador, { ",", identificador } ;
+retorno              = "Retornar", expresion ;
+llamada              = identificador, "(", [ argumentos ], ")" ;
+argumentos           = expresion, { ",", expresion } ;
+
+expresion_logica     = termino_logico, { "O", termino_logico } ;
+termino_logico       = factor_logico, { "Y", factor_logico } ;
+factor_logico        = [ "NO" ], ( comparacion | "(", expresion_logica, ")" ) ;
+comparacion          = expresion, operador_relacional, expresion ;
+operador_relacional  = "==" | "!=" | ">" | "<" | ">=" | "<=" ;
+
+expresion            = termino, { ("+" | "-"), termino } ;
+termino              = factor, { ("*" | "/"), factor } ;
+factor               = numero | cadena | referencia | llamada
+                     | "(", expresion, ")" ;
+
+referencia           = identificador, [ "[", expresion, "]" ] ;
+numero               = entero | decimal ;
+entero               = digito, { digito } ;
+decimal              = digito, { digito }, ".", digito, { digito } ;
+identificador        = letra, { letra | digito | "_" } ;
+cadena               = '"', { caracter }, '"' ;
+comentario           = "//", { caracter } ;
+letra                = "A"…"Z" | "a"…"z" ;
+digito               = "0"…"9" ;
+caracter             = ? carácter válido excepto salto de línea ? ;
+salto                = ? fin de línea ? ;
+
+(* Extensión compatible con el Anexo E: Funcion resultado = Nombre(parametros). *)
+(* Los programas A-D permiten declaración implícita al primer Leer/asignación. *)

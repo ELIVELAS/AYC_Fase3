@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compilador de Pseudocódigo v3.0</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-icon">&lt;/&gt;</span><div><b>Compilador</b><small>de Pseudocódigo</small></div></div>
+    <nav>
+      <button class="nav active" data-section="inicio">⌂ <span>Inicio</span></button>
+      <button class="nav" data-action="analyze">▷ <span>Analizar</span></button>
+      <button class="nav" data-action="compile">▷ <span>Compilar</span></button>
+      <button class="nav" data-action="example">▤ <span>Ejemplos</span></button>
+      <button class="nav" data-action="grammar">{ } <span>Gramática</span></button>
+      <button class="nav" data-action="languages">⚙ <span>Lenguajes</span></button>
+      <button class="nav" data-action="docs">▣ <span>Documentación</span></button>
+    </nav>
+    <div class="sidebar-bottom">
+      <label>Lenguaje destino</label>
+      <select id="sideLanguage"><option>JavaScript</option><option>Python</option></select>
+      <button class="nav about" data-action="about">ⓘ <span>Acerca de</span></button>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <div><h1>Compilador de Pseudocódigo</h1><p>Fase 3 · Análisis y generación de código</p></div>
+      <button class="theme" id="themeBtn" title="Cambiar tema">◐</button>
+    </header>
+
+    <section class="actions">
+      <button class="action blue" id="loadBtn"><b>▣ Cargar archivo</b><small>.txt</small></button>
+      <button class="action neutral" id="clearBtn"><b>▤ Limpiar</b><small>Editor</small></button>
+      <button class="action green" id="analyzeBtn"><b>▶ Analizar</b><small>Análisis real</small></button>
+      <button class="action violet" id="compileBtn"><b>⚙ Compilar</b><small>Generar código</small></button>
+      <button class="action amber" id="exportBtn"><b>⇩ Exportar</b><small>Guardar archivo</small></button>
+      <input id="fileInput" type="file" accept=".txt,text/plain" hidden>
+    </section>
+
+    <section class="editors">
+      <article class="panel editor-panel">
+        <div class="panel-head"><b>▣ Pseudocódigo (Entrada)</b><select id="exampleSelect"><option value="A">Programa A</option><option value="B">Programa B</option><option value="C">Programa C</option><option value="D">Programa D</option><option value="E">Programa E</option></select></div>
+        <textarea id="inputCode" spellcheck="false"></textarea>
+      </article>
+      <article class="panel editor-panel">
+        <div class="panel-head"><b>&lt;/&gt; Código generado (Salida)</b><select id="languageSelect"><option>JavaScript</option><option>Python</option></select></div>
+        <pre id="outputCode"></pre>
+      </article>
+    </section>
+
+    <section class="bottom-grid">
+      <article class="panel results">
+        <div class="panel-head"><b>▣ Resultado del análisis</b></div>
+        <div id="analysisStatus" class="status info">Listo para analizar. Presiona Analizar para ejecutar las etapas de la Fase 3.</div>
+        <div class="check" id="analysisDetail">Selecciona un programa y presiona Analizar para consultar el resultado.</div>
+      </article>
+      <article class="panel">
+        <div class="panel-head"><b>▤ Tabla de símbolos</b></div>
+        <table><thead><tr><th>Elemento</th><th>Uso</th></tr></thead><tbody id="symbolBody"></tbody></table>
+      </article>
+      <article class="panel console-panel">
+        <div class="panel-head"><b>&gt;_ Consola</b><button id="consoleClear">Limpiar</button></div>
+        <pre id="console">Sistema listo.
+Esperando instrucciones...
+</pre>
+      </article>
+    </section>
+    <section class="analysis-tools" aria-label="Resultados del análisis">
+      <button id="runCasesBtn">Probar 3 casos</button>
+      <button id="viewAstBtn"> Ver AST</button>
+      <button id="viewTokensBtn">▤ Ver tokens</button>
+      <button id="viewErrorsBtn">⚠ Ver errores</button>
+      <button id="exportErrorsBtn">⇩ Exportar errores .txt</button>
+    </section>
+    <footer><span>● Listo</span><span>Compilador de Pseudocódigo v3.0 · Fase 3</span></footer>
+  </main>
+</div>
+<div class="modal hidden" id="modal"><div class="modal-card"><button id="modalClose">×</button><h2 id="modalTitle"></h2><div id="modalContent"></div></div></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

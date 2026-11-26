@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import{readFileSync}from'node:fs';import{analyze}from'../interfaz/core.js';import{executeAst}from'../interfaz/interpreter.js';
+import {cases} from "./casos.js";
+for(const [name,list]of Object.entries(cases)){const src=readFileSync(new URL(`../pseudocodigo/programa_${name}.txt`,import.meta.url),'utf8');const result=analyze(src);for(let i=0;i<list.length;i++)test(`Programa ${name}, caso ${i+1}: ejecución didáctica AST`,()=>{assert.equal(result.success,true);const actual=executeAst(result.ast,list[i][0]);const lines=actual.output.filter(s=>list[i][1].some(expected=>expected===s));assert.deepEqual(lines,list[i][1]);});}

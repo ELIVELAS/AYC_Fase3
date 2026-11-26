@@ -1,0 +1,3 @@
+Cantidad de errores: 0
+Análisis exitoso. Cero errores.
+

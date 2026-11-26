@@ -1,0 +1,464 @@
+
+> ayc-compilador@3.0.0 test
+> node --test tests/*.test.js
+
+TAP version 13
+# Subtest: Programa A, caso 1: ejecución didáctica AST
+ok 1 - Programa A, caso 1: ejecución didáctica AST
+  ---
+  duration_ms: 2.324877
+  type: 'test'
+  ...
+# Subtest: Programa A, caso 2: ejecución didáctica AST
+ok 2 - Programa A, caso 2: ejecución didáctica AST
+  ---
+  duration_ms: 0.214013
+  type: 'test'
+  ...
+# Subtest: Programa A, caso 3: ejecución didáctica AST
+ok 3 - Programa A, caso 3: ejecución didáctica AST
+  ---
+  duration_ms: 0.200584
+  type: 'test'
+  ...
+# Subtest: Programa B, caso 1: ejecución didáctica AST
+ok 4 - Programa B, caso 1: ejecución didáctica AST
+  ---
+  duration_ms: 0.093698
+  type: 'test'
+  ...
+# Subtest: Programa B, caso 2: ejecución didáctica AST
+ok 5 - Programa B, caso 2: ejecución didáctica AST
+  ---
+  duration_ms: 0.075431
+  type: 'test'
+  ...
+# Subtest: Programa B, caso 3: ejecución didáctica AST
+ok 6 - Programa B, caso 3: ejecución didáctica AST
+  ---
+  duration_ms: 0.084684
+  type: 'test'
+  ...
+# Subtest: Programa C, caso 1: ejecución didáctica AST
+ok 7 - Programa C, caso 1: ejecución didáctica AST
+  ---
+  duration_ms: 0.118744
+  type: 'test'
+  ...
+# Subtest: Programa C, caso 2: ejecución didáctica AST
+ok 8 - Programa C, caso 2: ejecución didáctica AST
+  ---
+  duration_ms: 0.069162
+  type: 'test'
+  ...
+# Subtest: Programa C, caso 3: ejecución didáctica AST
+ok 9 - Programa C, caso 3: ejecución didáctica AST
+  ---
+  duration_ms: 0.237318
+  type: 'test'
+  ...
+# Subtest: Programa D, caso 1: ejecución didáctica AST
+ok 10 - Programa D, caso 1: ejecución didáctica AST
+  ---
+  duration_ms: 0.366166
+  type: 'test'
+  ...
+# Subtest: Programa D, caso 2: ejecución didáctica AST
+ok 11 - Programa D, caso 2: ejecución didáctica AST
+  ---
+  duration_ms: 0.215306
+  type: 'test'
+  ...
+# Subtest: Programa D, caso 3: ejecución didáctica AST
+ok 12 - Programa D, caso 3: ejecución didáctica AST
+  ---
+  duration_ms: 0.077193
+  type: 'test'
+  ...
+# Subtest: Programa E, caso 1: ejecución didáctica AST
+ok 13 - Programa E, caso 1: ejecución didáctica AST
+  ---
+  duration_ms: 0.10918
+  type: 'test'
+  ...
+# Subtest: Programa E, caso 2: ejecución didáctica AST
+ok 14 - Programa E, caso 2: ejecución didáctica AST
+  ---
+  duration_ms: 0.056362
+  type: 'test'
+  ...
+# Subtest: Programa E, caso 3: ejecución didáctica AST
+ok 15 - Programa E, caso 3: ejecución didáctica AST
+  ---
+  duration_ms: 0.04759
+  type: 'test'
+  ...
+# Subtest: Programa A construye AST y tabla de símbolos sin errores
+ok 16 - Programa A construye AST y tabla de símbolos sin errores
+  ---
+  duration_ms: 2.592458
+  type: 'test'
+  ...
+# Subtest: Programa B construye AST y tabla de símbolos sin errores
+ok 17 - Programa B construye AST y tabla de símbolos sin errores
+  ---
+  duration_ms: 0.414818
+  type: 'test'
+  ...
+# Subtest: Programa C construye AST y tabla de símbolos sin errores
+ok 18 - Programa C construye AST y tabla de símbolos sin errores
+  ---
+  duration_ms: 0.440916
+  type: 'test'
+  ...
+# Subtest: Programa D construye AST y tabla de símbolos sin errores
+ok 19 - Programa D construye AST y tabla de símbolos sin errores
+  ---
+  duration_ms: 0.287822
+  type: 'test'
+  ...
+# Subtest: Programa E construye AST y tabla de símbolos sin errores
+ok 20 - Programa E construye AST y tabla de símbolos sin errores
+  ---
+  duration_ms: 1.533356
+  type: 'test'
+  ...
+# Subtest: precedencia: suma y multiplicación
+ok 21 - precedencia: suma y multiplicación
+  ---
+  duration_ms: 0.22511
+  type: 'test'
+  ...
+# Subtest: precedencia: paréntesis
+ok 22 - precedencia: paréntesis
+  ---
+  duration_ms: 0.255875
+  type: 'test'
+  ...
+# Subtest: condicional anidado B
+ok 23 - condicional anidado B
+  ---
+  duration_ms: 0.254323
+  type: 'test'
+  ...
+# Subtest: ciclo anidado con condición D
+ok 24 - ciclo anidado con condición D
+  ---
+  duration_ms: 0.565078
+  type: 'test'
+  ...
+# Subtest: errores léxicos incluyen línea
+ok 25 - errores léxicos incluyen línea
+  ---
+  duration_ms: 0.446304
+  type: 'test'
+  ...
+# Subtest: error sintáctico por FinSi faltante
+ok 26 - error sintáctico por FinSi faltante
+  ---
+  duration_ms: 0.231419
+  type: 'test'
+  ...
+# Subtest: error semántico por variable sin definir
+ok 27 - error semántico por variable sin definir
+  ---
+  duration_ms: 0.130731
+  type: 'test'
+  ...
+# Subtest: error semántico por duplicación
+ok 28 - error semántico por duplicación
+  ---
+  duration_ms: 0.328551
+  type: 'test'
+  ...
+# Subtest: error semántico por incompatibilidad
+ok 29 - error semántico por incompatibilidad
+  ---
+  duration_ms: 0.148317
+  type: 'test'
+  ...
+# Subtest: reporte cero errores
+ok 30 - reporte cero errores
+  ---
+  duration_ms: 0.25959
+  type: 'test'
+  ...
+# Subtest: llamada con cantidad incorrecta de parámetros
+ok 31 - llamada con cantidad incorrecta de parámetros
+  ---
+  duration_ms: 0.58693
+  type: 'test'
+  ...
+# Subtest: cadena sin cerrar: ubicación y sugerencia
+ok 32 - cadena sin cerrar: ubicación y sugerencia
+  ---
+  duration_ms: 0.169738
+  type: 'test'
+  ...
+# Subtest: FinPara faltante: un error útil
+ok 33 - FinPara faltante: un error útil
+  ---
+  duration_ms: 0.249836
+  type: 'test'
+  ...
+# Subtest: ámbitos de funciones separados
+ok 34 - ámbitos de funciones separados
+  ---
+  duration_ms: 0.288222
+  type: 'test'
+  ...
+# Subtest: variable local no visible fuera de función
+ok 35 - variable local no visible fuera de función
+  ---
+  duration_ms: 0.168026
+  type: 'test'
+  ...
+# Subtest: AST C: acumuladores dentro del ciclo
+ok 36 - AST C: acumuladores dentro del ciclo
+  ---
+  duration_ms: 0.819571
+  type: 'test'
+  ...
+# Subtest: AST D: arreglo e índice
+ok 37 - AST D: arreglo e índice
+  ---
+  duration_ms: 0.288513
+  type: 'test'
+  ...
+# Subtest: JavaScript - Programa A, caso 1
+ok 38 - JavaScript - Programa A, caso 1
+  ---
+  duration_ms: 33.941284
+  type: 'test'
+  ...
+# Subtest: JavaScript - Programa A, caso 2
+ok 39 - JavaScript - Programa A, caso 2
+  ---
+  duration_ms: 25.276881
+  type: 'test'
+  ...
+# Subtest: JavaScript - Programa A, caso 3
+ok 40 - JavaScript - Programa A, caso 3
+  ---
+  duration_ms: 21.207339
+  type: 'test'
+  ...
+# Subtest: JavaScript - Programa B, caso 1
+ok 41 - JavaScript - Programa B, caso 1
+  ---
+  duration_ms: 25.337169
+  type: 'test'
+  ...
+# Subtest: JavaScript - Programa B, caso 2
+ok 42 - JavaScript - Programa B, caso 2
+  ---
+  duration_ms: 24.383412
+  type: 'test'
+  ...
+# Subtest: JavaScript - Programa B, caso 3
+ok 43 - JavaScript - Programa B, caso 3
+  ---
+  duration_ms: 23.999049
+  type: 'test'
+  ...
+# Subtest: JavaScript - Programa C, caso 1
+ok 44 - JavaScript - Programa C, caso 1
+  ---
+  duration_ms: 25.369717
+  type: 'test'
+  ...
+# Subtest: JavaScript - Programa C, caso 2
+ok 45 - JavaScript - Programa C, caso 2
+  ---
+  duration_ms: 23.158397
+  type: 'test'
+  ...
+# Subtest: JavaScript - Programa C, caso 3
+ok 46 - JavaScript - Programa C, caso 3
+  ---
+  duration_ms: 45.673638
+  type: 'test'
+  ...
+# Subtest: JavaScript - Programa D, caso 1
+ok 47 - JavaScript - Programa D, caso 1
+  ---
+  duration_ms: 27.210364
+  type: 'test'
+  ...
+# Subtest: JavaScript - Programa D, caso 2
+ok 48 - JavaScript - Programa D, caso 2
+  ---
+  duration_ms: 24.807884
+  type: 'test'
+  ...
+# Subtest: JavaScript - Programa D, caso 3
+ok 49 - JavaScript - Programa D, caso 3
+  ---
+  duration_ms: 24.248515
+  type: 'test'
+  ...
+# Subtest: JavaScript - Programa E, caso 1
+ok 50 - JavaScript - Programa E, caso 1
+  ---
+  duration_ms: 24.271038
+  type: 'test'
+  ...
+# Subtest: JavaScript - Programa E, caso 2
+ok 51 - JavaScript - Programa E, caso 2
+  ---
+  duration_ms: 23.394624
+  type: 'test'
+  ...
+# Subtest: JavaScript - Programa E, caso 3
+ok 52 - JavaScript - Programa E, caso 3
+  ---
+  duration_ms: 26.393106
+  type: 'test'
+  ...
+# Subtest: JavaScript: código nuevo y ciclo descendente
+ok 53 - JavaScript: código nuevo y ciclo descendente
+  ---
+  duration_ms: 25.925831
+  type: 'test'
+  ...
+# Subtest: JavaScript: índice fuera de rango
+ok 54 - JavaScript: índice fuera de rango
+  ---
+  duration_ms: 24.764461
+  type: 'test'
+  ...
+# Subtest: JavaScript: función y variable local
+ok 55 - JavaScript: función y variable local
+  ---
+  duration_ms: 25.853886
+  type: 'test'
+  ...
+# Subtest: JavaScript: no genera código inválido
+ok 56 - JavaScript: no genera código inválido
+  ---
+  duration_ms: 0.302634
+  type: 'test'
+  ...
+# Subtest: Python - Programa A, caso 1
+ok 57 - Python - Programa A, caso 1
+  ---
+  duration_ms: 751.645241
+  type: 'test'
+  ...
+# Subtest: Python - Programa A, caso 2
+ok 58 - Python - Programa A, caso 2
+  ---
+  duration_ms: 622.366105
+  type: 'test'
+  ...
+# Subtest: Python - Programa A, caso 3
+ok 59 - Python - Programa A, caso 3
+  ---
+  duration_ms: 597.160748
+  type: 'test'
+  ...
+# Subtest: Python - Programa B, caso 1
+ok 60 - Python - Programa B, caso 1
+  ---
+  duration_ms: 607.85485
+  type: 'test'
+  ...
+# Subtest: Python - Programa B, caso 2
+ok 61 - Python - Programa B, caso 2
+  ---
+  duration_ms: 794.911045
+  type: 'test'
+  ...
+# Subtest: Python - Programa B, caso 3
+ok 62 - Python - Programa B, caso 3
+  ---
+  duration_ms: 609.818597
+  type: 'test'
+  ...
+# Subtest: Python - Programa C, caso 1
+ok 63 - Python - Programa C, caso 1
+  ---
+  duration_ms: 626.84822
+  type: 'test'
+  ...
+# Subtest: Python - Programa C, caso 2
+ok 64 - Python - Programa C, caso 2
+  ---
+  duration_ms: 607.694741
+  type: 'test'
+  ...
+# Subtest: Python - Programa C, caso 3
+ok 65 - Python - Programa C, caso 3
+  ---
+  duration_ms: 712.414204
+  type: 'test'
+  ...
+# Subtest: Python - Programa D, caso 1
+ok 66 - Python - Programa D, caso 1
+  ---
+  duration_ms: 700.704555
+  type: 'test'
+  ...
+# Subtest: Python - Programa D, caso 2
+ok 67 - Python - Programa D, caso 2
+  ---
+  duration_ms: 624.735352
+  type: 'test'
+  ...
+# Subtest: Python - Programa D, caso 3
+ok 68 - Python - Programa D, caso 3
+  ---
+  duration_ms: 638.142831
+  type: 'test'
+  ...
+# Subtest: Python - Programa E, caso 1
+ok 69 - Python - Programa E, caso 1
+  ---
+  duration_ms: 641.405097
+  type: 'test'
+  ...
+# Subtest: Python - Programa E, caso 2
+ok 70 - Python - Programa E, caso 2
+  ---
+  duration_ms: 629.736388
+  type: 'test'
+  ...
+# Subtest: Python - Programa E, caso 3
+ok 71 - Python - Programa E, caso 3
+  ---
+  duration_ms: 636.4033
+  type: 'test'
+  ...
+# Subtest: Python: código nuevo y ciclo descendente
+ok 72 - Python: código nuevo y ciclo descendente
+  ---
+  duration_ms: 589.551555
+  type: 'test'
+  ...
+# Subtest: Python: índice fuera de rango
+ok 73 - Python: índice fuera de rango
+  ---
+  duration_ms: 595.996373
+  type: 'test'
+  ...
+# Subtest: Python: función y variable local
+ok 74 - Python: función y variable local
+  ---
+  duration_ms: 648.940907
+  type: 'test'
+  ...
+# Subtest: Python: no genera código inválido
+ok 75 - Python: no genera código inválido
+  ---
+  duration_ms: 0.184119
+  type: 'test'
+  ...
+1..75
+# tests 75
+# suites 0
+# pass 75
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 12190.658168

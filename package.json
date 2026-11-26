@@ -1,0 +1,19 @@
+{
+  "name": "ayc-compilador",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Compilador de pseudoc\u00f3digo a JavaScript y Python",
+  "scripts": {
+    "start": "node src/index.js",
+    "ui": "node src/server.js",
+    "programa:a": "node traducciones/programa_A/javascript/programaA.js",
+    "programa:b": "node traducciones/programa_B/javascript/programaB.js",
+    "test": "node --test tests/*.test.js",
+    "analizar": "node src/analizar.js",
+    "compilar": "node src/compilar.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

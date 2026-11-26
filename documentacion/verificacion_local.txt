@@ -1,0 +1,6 @@
+src/index.js: OK
+src/server.js: OK
+traducciones/programa_A/javascript/programaA.js: OK
+traducciones/programa_B/javascript/programaB.js: OK
+Python Programa A: OK
+Python Programa B: OK
